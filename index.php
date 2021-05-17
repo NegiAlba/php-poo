@@ -26,18 +26,19 @@
     // $animal1->nom = "Flipper le Dauphin";
     // $animal1->nb_de_pattes = 0;
 
+    // $animal2 = new Animal();
+    // $animal2->espece = "Dinosaure";
+    // $animal2->nom = "Denver le dernier dinosaure";
+    // $animal2->nb_de_pattes = "2 pattes et 2 moignons";
+
     $animal1 = new Animal();
-    $animal1->espece = "Dauphin";
-    $animal1->nom = "Flipper le Dauphin";
-    $animal1->nb_de_pattes = 0;
 
-    echo $animal1->espece;
-    echo $animal1->nom;
+    echo $animal1->get_espece();
 
-    $animal2 = new Animal();
-    $animal2->espece = "Dinosaure";
-    $animal2->nom = "Denver le dernier dinosaure";
-    $animal2->nb_de_pattes = "2 pattes et 2 moignons";
+    $animal1->set_espece("Dauphin");
+
+    echo $animal1->get_espece();
+
 
     // print_r($animal1);
     // echo '<br>';
