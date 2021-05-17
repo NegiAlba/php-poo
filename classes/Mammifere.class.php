@@ -1,6 +1,6 @@
 <?php
 
-class Mammifere extends Animal
+final class Mammifere extends Animal
 {
     private $oeuf;
 

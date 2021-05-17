@@ -2,6 +2,10 @@
 
 class Animal
 {
+
+    //* Constantes
+
+    const GOODBYE_MESSAGE = " COIN !";
     //* Propriétés
 
     /**
@@ -39,6 +43,11 @@ class Animal
         $this->setNom($newNom);
         $this->setNb_de_pattes($newNb_de_pattes);
     }
+    function __destruct()
+    {
+        $this->goodbye();
+    }
+
     //* Méthodes
     //TODO : Les méthodes getters et setters : Getter permet de récupérer la valeur d'une propriété - Setter permet d'affecter une valeur à une propriété.
 
@@ -105,5 +114,10 @@ class Animal
     public function identify()
     {
         echo " Je suis un {$this->espece} qui s'appelle {$this->nom} et j'ai {$this->nb_de_pattes} pattes ";
+    }
+
+    public function goodbye()
+    {
+        echo self::GOODBYE_MESSAGE;
     }
 }

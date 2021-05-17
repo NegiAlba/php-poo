@@ -18,6 +18,7 @@
     <?php
     require 'classes/Animal.class.php';
     require 'classes/Mammifere.class.php';
+    // require 'classes/Humain.class.php';
 
     //* Après avoir récupéré notre  classe, nous allons instancier la classe Animal à l'aide de la syntaxe new Animal() qui va nous permettre de générer 2 nouveaux objets.
 
@@ -35,7 +36,10 @@
 
     $animal1 = new Animal("Dauphin", "Flipper le Dauphin", 0);
     $mammifere = new Mammifere("Dauphin", "Flipper le Dauphin", 0);
+    // $humain = new Humain("Dauphin", "Flipper le Dauphin", 0);
 
+
+    // echo $animal1::GOODBYE_MESSAGE;
     // var_dump($mammifere);
     $animal1->identify();
     echo '<br>';
