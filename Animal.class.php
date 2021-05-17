@@ -86,7 +86,5 @@ class Animal
     public function setNb_de_pattes(Int $nb_de_pattes)
     {
         $this->nb_de_pattes = $nb_de_pattes;
-
-        return $this;
     }
 }
