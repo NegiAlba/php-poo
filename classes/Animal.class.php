@@ -26,7 +26,7 @@ class Animal
      *
      * @var Int
      */
-    private $nb_de_pattes;
+    protected $nb_de_pattes;
     //! Les propriétés sont des données sensibles qui vont être manipulées par les utilisateurs et il convient de limiter leur accès
 
 
@@ -100,5 +100,10 @@ class Animal
         } else {
             $this->nb_de_pattes = 0;
         }
+    }
+
+    public function identify()
+    {
+        echo " Je suis un {$this->espece} qui s'appelle {$this->nom} et j'ai {$this->nb_de_pattes} pattes ";
     }
 }
