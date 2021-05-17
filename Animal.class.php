@@ -29,6 +29,16 @@ class Animal
     private $nb_de_pattes;
     //! Les propriétés sont des données sensibles qui vont être manipulées par les utilisateurs et il convient de limiter leur accès
 
+
+    //* Méthodes magiques
+
+    //TODO : La méthode construct va s'exécuter à partir du moment où l'on essaie d'instancier la classe.
+    public function __construct($newEspece, $newNom, $newNb_de_pattes)
+    {
+        $this->setEspece($newEspece);
+        $this->setNom($newNom);
+        $this->setNb_de_pattes($newNb_de_pattes);
+    }
     //* Méthodes
     //TODO : Les méthodes getters et setters : Getter permet de récupérer la valeur d'une propriété - Setter permet d'affecter une valeur à une propriété.
 
@@ -85,6 +95,10 @@ class Animal
      */
     public function setNb_de_pattes(Int $nb_de_pattes)
     {
-        $this->nb_de_pattes = $nb_de_pattes;
+        if ($nb_de_pattes > 0) {
+            $this->nb_de_pattes = $nb_de_pattes;
+        } else {
+            $this->nb_de_pattes = 0;
+        }
     }
 }

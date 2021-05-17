@@ -31,13 +31,21 @@
     // $animal2->nom = "Denver le dernier dinosaure";
     // $animal2->nb_de_pattes = "2 pattes et 2 moignons";
 
-    $animal1 = new Animal();
+    $animal1 = new Animal("Dauphin", "Flipper le Dauphin", 0);
 
-    echo $animal1->get_espece();
+    $animal2 = new Animal("a", "b", -5);
 
-    $animal1->set_espece("Dauphin");
+    // echo $animal1->get_espece();
 
-    echo $animal1->get_espece();
+    // $animal1->setEspece("Dauphin");
+
+    echo $animal1->getEspece();
+    echo '<br>';
+    echo $animal2->getNb_de_pattes();
+    echo '<br>';
+    var_dump($animal1 instanceof Animal);
+    echo '<br>';
+    print_r(get_class($animal1));
 
 
     // print_r($animal1);
